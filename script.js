@@ -22,5 +22,14 @@ function convertToRoman(num) {
   return result;
 }
 
-// Test case
-console.log(convertToRoman(36)); // Output: XXXVI
+// Take input from the user
+const userInput = prompt("Enter a number between 0 and 100000:");
+const inputNumber = parseInt(userInput, 10);
+
+// Check if the input is a valid number
+if (!isNaN(inputNumber) && inputNumber >= 0 && inputNumber <= 100000) {
+  const romanNumeral = convertToRoman(inputNumber);
+  console.log(`Roman Numeral: ${romanNumeral}`);
+} else {
+  console.log("Invalid input. Please enter a number between 0 and 100000.");
+}
